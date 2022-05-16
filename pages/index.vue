@@ -9,7 +9,6 @@
 <script>
   import commerce from "~/common/commerce"
   import ProductList from '../components/ProductList.vue';
-  
   export default {
   components: { ProductList },
     async asyncData() {
