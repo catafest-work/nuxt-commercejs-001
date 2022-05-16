@@ -2,14 +2,16 @@
   <div>
     <pre>{{ JSON.stringify(merchant, null, 2) }}</pre>
     <pre>{{ JSON.stringify(categories, null, 2) }}</pre>
-    <pre>{{ JSON.stringify(products, null, 2) }} </pre>  
+    <!-- <pre>{{ JSON.stringify(products, null, 2) }} </pre>   -->
+    <product-list :products="products"></product-list>
   </div>
 </template>
-
 <script>
   import commerce from "~/common/commerce"
+  import ProductList from '../components/ProductList.vue';
 
   export default {
+  components: { ProductList },
     async asyncData() {
       const merchant = await commerce.merchants.about()
       const {data: categories} = await commerce.categories.list()
