@@ -10,6 +10,7 @@
     </li>
   </ul>
 </template>
+
 <script>
   export default {
     props: ["products"],
