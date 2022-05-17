@@ -13,6 +13,7 @@
 </template>
 
 <script>
+// de verificat dependentele 
 export default {
   props: ["products"],
 };
