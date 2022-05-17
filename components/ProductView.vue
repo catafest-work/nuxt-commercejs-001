@@ -1,8 +1,9 @@
 <template>
-  <p>{{product.name}}: {{product.price.formatted_with_symbol}}</p>
+  <p>{{ product.name }}: {{ product.price.formatted_with_symbol }}</p>
 </template>
+
 <script>
-  export default {
-    props: ["product"],
-  };
+export default {
+  props: ["product"],
+};
 </script>
