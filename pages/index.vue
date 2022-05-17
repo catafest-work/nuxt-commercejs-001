@@ -15,15 +15,15 @@
   </div>
 </template>
 <script>
-  import commerce from '~/common/commerce';
-  import ProductList from '~/components/ProductList.vue';
-  import CategoryList from '~/components/CategoryList.vue';
+  //import commerce from '~/common/commerce';
+  // import ProductList from '~/components/ProductList.vue';
+  // import CategoryList from '~/components/CategoryList.vue';
   export default {
-  components: { ProductList, CategoryList },
-    async asyncData() {
-      const merchant = await commerce.merchants.about()
-      const {data: categories} = await commerce.categories.list()
-      const {data: products} = await commerce.products.list()
+  //components: { ProductList, CategoryList },
+    async asyncData({$commerce}) {
+      const merchant = await $commerce.merchants.about()
+      const {data: categories} = await $commerce.categories.list()
+      const {data: products} = await $commerce.products.list()
       return {
         merchant,
         categories,

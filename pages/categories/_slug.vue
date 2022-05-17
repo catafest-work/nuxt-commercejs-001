@@ -6,12 +6,12 @@
 </template>
 
 <script>
-import commerce from "~/common/commerce";
+//import commerce from "~/common/commerce";
 export default {
-  async asyncData({params}) {
+  async asyncData({params, $commerce}) {
     const {slug} = params
-    const category = await commerce.categories.retrieve(slug, {type: 'slug'})
-    const {data: products } = await commerce.products.list({category_slug: slug,});
+    const category = await $commerce.categories.retrieve(slug, {type: 'slug'})
+    const {data: products } = await $commerce.products.list({category_slug: slug,});
     return {
       category, 
       products
